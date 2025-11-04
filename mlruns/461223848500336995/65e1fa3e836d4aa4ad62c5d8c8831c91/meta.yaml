@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/juanc/Downloads/mlops-example/mlruns/461223848500336995/65e1fa3e836d4aa4ad62c5d8c8831c91/artifacts
+end_time: 1762218839613
+entry_point_name: ''
+experiment_id: '461223848500336995'
+lifecycle_stage: active
+run_id: 65e1fa3e836d4aa4ad62c5d8c8831c91
+run_name: intrigued-seal-440
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762218839530
+status: 3
+tags: []
+user_id: juanc
