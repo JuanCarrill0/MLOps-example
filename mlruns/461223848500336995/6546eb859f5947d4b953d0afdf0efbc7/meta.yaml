@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/juanc/Downloads/mlops-example/mlruns/461223848500336995/6546eb859f5947d4b953d0afdf0efbc7/artifacts
+end_time: 1762216576425
+entry_point_name: ''
+experiment_id: '461223848500336995'
+lifecycle_stage: active
+run_id: 6546eb859f5947d4b953d0afdf0efbc7
+run_name: secretive-cow-133
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762216576353
+status: 3
+tags: []
+user_id: juanc

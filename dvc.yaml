@@ -1,0 +1,17 @@
+stages:
+  preprocess:
+    cmd: python src/train.py --preprocess-only
+    deps: []
+    outs:
+      - data/processed/housing.csv
+  train:
+    cmd: python src/train.py
+    deps:
+      - data/processed/housing.csv
+    outs:
+      - models/model.pkl
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - models/model.pkl
+      - data/processed/housing.csv
