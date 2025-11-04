@@ -1,11 +1,11 @@
-# 🧠 MLOps Example – Implementación práctica en Ingeniería de Software
+# MLOps Example – Implementación práctica en Ingeniería de Software
 
 Este proyecto es una **implementación funcional de MLOps (Machine Learning Operations)**, aplicada al contexto de la **ingeniería de software**.  
 Su objetivo es demostrar cómo automatizar el ciclo de vida completo de un modelo de Machine Learning: desde el entrenamiento hasta el despliegue y la monitorización, usando herramientas abiertas y pipelines reproducibles.
 
 ---
 
-## 🚀 ¿Qué hace este programa?
+## ¿Qué hace este programa?
 
 Este sistema entrena un modelo de **regresión lineal** para predecir el **precio estimado de una vivienda** a partir de variables simples:
 - Número de habitaciones (`rooms`)
@@ -22,9 +22,9 @@ Incluye:
 
 ---
 
-## 🛠️ Implementación MLOps del Proyecto
+## Implementación MLOps del Proyecto
 
-### 🔧 Stack Tecnológico MLOps
+### Stack Tecnológico MLOps
 
 | Herramienta | Propósito | Implementación |
 |-------------|-----------|----------------|
@@ -35,7 +35,7 @@ Incluye:
 | **scikit-learn** | Machine Learning Framework | Modelo de regresión lineal |
 | **GitHub** | Source Code Management | Control de versiones y colaboración |
 
-### 🔄 Arquitectura MLOps
+### Arquitectura MLOps
 
 ```mermaid
 graph TB
@@ -53,7 +53,7 @@ graph TB
     G --> L[Metrics Dashboard]
 ```
 
-### 📊 1. MLflow - Experiment Tracking & Model Registry
+### 1. MLflow - Experiment Tracking & Model Registry
 
 **Ubicación**: Integrado en `src/train.py`
 
@@ -79,7 +79,7 @@ mlflow ui
 # Acceder a: http://localhost:5000
 ```
 
-### 🔄 2. DVC - Data Version Control & Pipeline Management
+### 2. DVC - Data Version Control & Pipeline Management
 
 **Ubicación**: `dvc.yaml`
 
@@ -122,7 +122,7 @@ dvc repro train
 dvc dag
 ```
 
-### 🐳 3. Docker - Containerización & Deployment
+### 3. Docker - Containerización & Deployment
 
 **Ubicación**: `Dockerfile`
 
@@ -160,7 +160,7 @@ docker run -p 8000:8000 mlops-example
 # Acceder a API: http://localhost:8000/docs
 ```
 
-### 🌐 4. FastAPI - Model Serving & API
+### 4. FastAPI - Model Serving & API
 
 **Ubicación**: `src/predict.py`
 
@@ -211,9 +211,9 @@ print(f'MAE: {mae:.2f}')  # Error promedio en unidades de precio
 
 ---
 
-## ⚙️ Flujo MLOps Completo
+## Flujo MLOps Completo
 
-### 🔄 Pipeline de Desarrollo
+### Pipeline de Desarrollo
 
 1. **Desarrollo Local**:
    ```bash
@@ -256,17 +256,17 @@ print(f'MAE: {mae:.2f}')  # Error promedio en unidades de precio
    # API disponible en: http://localhost:8000/docs
    ```
 
-### 🎯 Beneficios de la Implementación MLOps
+### Beneficios de la Implementación MLOps
 
-- **🔄 Reproducibilidad**: Experimentos completamente reproducibles con DVC + MLflow
-- **📊 Observabilidad**: Visibilidad completa del rendimiento del modelo
-- **🚀 Deployment Rápido**: De desarrollo a producción en minutos
-- **🔧 Mantenibilidad**: Código modular y bien documentado
-- **📈 Escalabilidad**: FastAPI + Docker para alta concurrencia
-- **🛡️ Confiabilidad**: Health checks y validación automática
-- **📝 Trazabilidad**: Historial completo de cambios en datos y modelos
+- **Reproducibilidad**: Experimentos completamente reproducibles con DVC + MLflow
+- **Observabilidad**: Visibilidad completa del rendimiento del modelo
+- **Deployment Rápido**: De desarrollo a producción en minutos
+- **Mantenibilidad**: Código modular y bien documentado
+- **Escalabilidad**: FastAPI + Docker para alta concurrencia
+- **Confiabilidad**: Health checks y validación automática
+- **Trazabilidad**: Historial completo de cambios en datos y modelos
 
-### 🧩 Arquitectura de Componentes
+### Arquitectura de Componentes
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -286,7 +286,7 @@ print(f'MAE: {mae:.2f}')  # Error promedio en unidades de precio
 
 ---
 
-## 🧩 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 mlops-example/
@@ -329,7 +329,7 @@ mlops-example/
 
 ---
 
-## 🛠️ Instalación y ejecución local
+## Instalación y ejecución local
 
 ### 1️⃣ Clonar el repositorio
 ```bash
@@ -374,8 +374,8 @@ MAE: 7.95
 uvicorn src.predict:app --reload
 ```
 **API disponible en**:  
-👉 **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)  
-👉 **Health Check**: [http://localhost:8000/health](http://localhost:8000/health)
+**Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)  
+**Health Check**: [http://localhost:8000/health](http://localhost:8000/health)
 
 **Ejemplo de predicción**:
 ```bash
@@ -388,7 +388,7 @@ curl -X POST "http://localhost:8000/predict" \
 ```bash
 mlflow ui
 ```
-👉 **MLflow UI**: [http://localhost:5000](http://localhost:5000)
+**MLflow UI**: [http://localhost:5000](http://localhost:5000)
 
 ### 7️⃣ Ejecutar pipeline DVC
 ```bash
@@ -404,7 +404,7 @@ dvc dag
 
 ---
 
-## 🐳 Deployment con Docker
+## Deployment con Docker
 
 ### Construcción y ejecución
 ```bash
@@ -435,7 +435,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 ---
 
-## 🧱 CI/CD con GitHub Actions
+## CI/CD con GitHub Actions
 
 El archivo `.github/workflows/ci-cd.yml` ejecuta automáticamente:
 1. Instalación de dependencias  
@@ -447,7 +447,7 @@ Cada vez que haces un `git push`, GitHub Actions lanza el pipeline y te mostrar�
 
 ---
 
-## 💾 Control de versiones de datos y modelos con DVC
+## Control de versiones de datos y modelos con DVC
 
 ### Inicialización y configuración
 ```bash
@@ -516,25 +516,25 @@ mlruns/
 ```
 
 ### Comparación de experimentos
-- 📊 **Métricas**: Comparar R² score entre diferentes runs
-- � **Artifacts**: Descargar modelos de runs específicos
+- **Métricas**: Comparar R² score entre diferentes runs
+- **Artifacts**: Descargar modelos de runs específicos
 ---
 
-## � Concepto: ¿Qué es MLOps?
+## Concepto: ¿Qué es MLOps?
 
 > **MLOps** (Machine Learning Operations) es la práctica que combina **Machine Learning**, **DevOps** y **Data Engineering** para automatizar y mantener el ciclo de vida de los modelos de aprendizaje automático en producción.
 
-### 🎯 Principios MLOps implementados en este proyecto:
+### Principios MLOps implementados en este proyecto:
 
-1. **🔄 Reproducibilidad**: DVC + MLflow garantizan experimentos reproducibles
-2. **📊 Observabilidad**: Tracking completo de métricas y modelos
-3. **🚀 Automation**: Pipeline automatizado desde datos hasta deployment
-4. **🔧 Mantenibilidad**: Código modular y bien documentado
-5. **📈 Escalabilidad**: FastAPI + Docker para alta disponibilidad
-6. **🛡️ Reliability**: Health checks y validación automática
-7. **📝 Traceability**: Historial completo de cambios y versiones
+1. ** Reproducibilidad**: DVC + MLflow garantizan experimentos reproducibles
+2. ** Observabilidad**: Tracking completo de métricas y modelos
+3. ** Automation**: Pipeline automatizado desde datos hasta deployment
+4. ** Mantenibilidad**: Código modular y bien documentado
+5. ** Escalabilidad**: FastAPI + Docker para alta disponibilidad
+6. ** Reliability**: Health checks y validación automática
+7. **Traceability**: Historial completo de cambios y versiones
 
-### 📊 Comparación: Antes vs. Después de MLOps
+###  Comparación: Antes vs. Después de MLOps
 
 | Aspecto | Sin MLOps � | Con MLOps 🚀 |
 |---------|---------------|---------------|
@@ -547,22 +547,14 @@ mlruns/
 
 ---
 
-## 🔮 Próximos pasos para extender el MLOps
+##  Próximos pasos para extender el MLOps
 
-- 🔍 **Model Monitoring**: Integrar Evidently AI para detectar model drift
-- ☁️ **Cloud Deployment**: Desplegar en GCP/AWS con Kubernetes
-- 🔄 **CI/CD Pipeline**: GitHub Actions para deployment automático
-- 📊 **A/B Testing**: Framework para testing de modelos en producción
-- 🛡️ **Model Security**: Validación y sanitización de inputs
-- 📈 **Advanced Metrics**: Métricas de negocio y performance monitoring
-
----
-
-## 👨‍💻 Autor
-**Proyecto educativo de MLOps en Ingeniería de Software**  
-Desarrollado por Juan Carrillo  
-Repository: [MLOps-example](https://github.com/JuanCarrill0/MLOps-example)  
-Licencia: MIT
+-  **Model Monitoring**: Integrar Evidently AI para detectar model drift
+-  **Cloud Deployment**: Desplegar en GCP/AWS con Kubernetes
+-  **CI/CD Pipeline**: GitHub Actions para deployment automático
+-  **A/B Testing**: Framework para testing de modelos en producción
+-  **Model Security**: Validación y sanitización de inputs
+-  **Advanced Metrics**: Métricas de negocio y performance monitoring
 
 ---
 
@@ -570,7 +562,7 @@ Licencia: MIT
 
 ---
 
-## 📚 Concepto: ¿Qué es MLOps?
+## Concepto: ¿Qué es MLOps?
 
 > **MLOps** (Machine Learning Operations) es la práctica que combina **Machine Learning**, **DevOps** y **Data Engineering** para automatizar y mantener el ciclo de vida de los modelos de aprendizaje automático en producción.
 
